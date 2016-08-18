@@ -15,7 +15,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 	enum SORT_METHOD{
 
 		INSERTION_SORT("插入排序", InsertionSortActivity.class),
-		BUBBLE_SORT("冒泡排序", BubbleSortActivity.class);
+		BUBBLE_SORT("冒泡排序", BubbleSortActivity.class),
+		SELECTION_SORT("选择排序", SelectionSortActivity.class);
 
 		String mName;
 		Class<? extends Activity> mActivityClass;
