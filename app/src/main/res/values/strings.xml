@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SortStudy</string>
+    <string name="des_insertion_sort">插入排序的原理：始终定义第一个元素为有序的，将元素逐个插入到有序排列之中，其特点是要不断的移动数据空出一个适当的位置，最后把待插入的元素放到里面去。</string>
+    <string name="des_bubble_sort">"冒泡排序的原理：每次在无序队列里将相邻两个数依次进行比较，将小数调换到前面，逐次比较，直至将最大的数移到最后。最将剩下的N-1个数继续比较，将次大数移至倒数第二位。 依此规律，直至比较结束。 "</string>
+    <string-array name="sort_method">
+        <item>插入排序</item>
+        <item>冒泡排序</item>
+        <item>选择排序</item>
+        <item>快速排序</item>
+        <item>归并排序</item>
+        <item>堆排序</item>
+    </string-array>
+</resources>
