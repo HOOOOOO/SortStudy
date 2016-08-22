@@ -11,15 +11,18 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".InsertionSortActivity">
+        <activity
+            android:label="插入排序"
+            android:name=".InsertionSortActivity">
         </activity>
         <activity android:name=".BubbleSortActivity">
         </activity>
         <activity android:name=".SelectionSortActivity">
+        </activity>
+        <activity android:name=".MergeSortActivity">
         </activity>
     </application>
 

@@ -21,11 +21,10 @@ import java.util.Map;
 import java.util.PriorityQueue;
 
 public class InsertionSortActivity extends BaseSortActiviy{
-	/**
-     *插入排序的原理：始终定义第一个元素为有序的，将元素逐个插入到有序排列之中，其特点是要不断的移动数据，
-	 *空出一个适当的位置，最后把待插入的元素放到里面去。
-     *插入排序的代码如下：
-    */
+	/*
+    插入排序的原理：始终定义第一个元素为有序的，将元素逐个插入到有序排列之中，其特点是要不断的移动数据，
+	空出一个适当的位置，最后把待插入的元素放到里面去。
+    插入排序的代码如下：
 	static void insertion_sort(int[] unsorted)
 	{
 		for (int i = 1; i < unsorted.length; i++)
@@ -42,18 +41,22 @@ public class InsertionSortActivity extends BaseSortActiviy{
 				unsorted[j] = temp;
 			}
 		}
-	}
-
+	}*/
 
 	@Override
 	public void setDescription(TextView textView) {
 		textView.setText(R.string.des_insertion_sort);
 	}
 
+	@Override
+	public int calculateSteps() {
+		return 0;
+	}
+
 	@TargetApi(Build.VERSION_CODES.JELLY_BEAN)
 	@Override
 	public void performSort(int step) {
-		final int i = step;
+		final int i = step + 1;
 		final int tmp = mUnsorted[i];
 		final TextView numberTvI = mIntToTv.get(tmp);
 		int translationY = numberTvI.getMeasuredHeight() + 20;

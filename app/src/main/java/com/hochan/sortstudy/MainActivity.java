@@ -16,7 +16,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 		INSERTION_SORT("插入排序", InsertionSortActivity.class),
 		BUBBLE_SORT("冒泡排序", BubbleSortActivity.class),
-		SELECTION_SORT("选择排序", SelectionSortActivity.class);
+		SELECTION_SORT("选择排序", SelectionSortActivity.class),
+		MERGE_SORT("归并排序", MergeSortActivity.class);
 
 		String mName;
 		Class<? extends Activity> mActivityClass;
