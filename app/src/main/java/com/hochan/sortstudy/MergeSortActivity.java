@@ -2,6 +2,7 @@ package com.hochan.sortstudy;
 
 import android.annotation.TargetApi;
 import android.os.Build;
+import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.ThemedSpinnerAdapter;
 
@@ -10,7 +11,7 @@ import java.util.List;
 
 public class MergeSortActivity extends BaseSortActiviy {
 
-	/*static void merge_sort(int unsorted[], int low, int high) {
+	static void merge_sort(int unsorted[], int low, int high) {
 		int mid = (low + high) / 2;
 		if(low < high){
 			merge_sort(unsorted, low, mid);
@@ -47,7 +48,7 @@ public class MergeSortActivity extends BaseSortActiviy {
 		for (int k2 = 0; k2 < tmp.length; k2++) {
 			unsortred[k2 + low] = tmp[k2];
 		}
-	}*/
+	}
 
 	private static final int SORT = 0;
 	private static final int MERGE = 1;
@@ -297,5 +298,11 @@ public class MergeSortActivity extends BaseSortActiviy {
 			this.mMid = mid;
 			this.mHigh = high;
 		}
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		MainActivity.SORT_METHOD.MERGE_SORT.showCode(this);
+		return true;
 	}
 }

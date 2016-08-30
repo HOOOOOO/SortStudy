@@ -4,11 +4,12 @@ import android.annotation.TargetApi;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 public class SelectionSortActivity extends BaseSortActiviy {
 
-	/*static void selection_sort(int[] unsorted) {
+	static void selection_sort(int[] unsorted) {
 		for (int i = 0; i < unsorted.length; i++) {
 			int min = i;
 			for (int j = i; i < unsorted.length; j++) {
@@ -22,7 +23,7 @@ public class SelectionSortActivity extends BaseSortActiviy {
 				unsorted[i] = tmp;
 			}
 		}
-	}*/
+	}
 
 	@Override
 	public void setDescription(TextView textView) {
@@ -98,5 +99,11 @@ public class SelectionSortActivity extends BaseSortActiviy {
 				}
 			}
 		}).start();
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		MainActivity.SORT_METHOD.SELECTION_SORT.showCode(this);
+		return true;
 	}
 }

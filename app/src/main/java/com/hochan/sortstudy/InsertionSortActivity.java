@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.test.suitebuilder.TestMethod;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -25,6 +26,7 @@ public class InsertionSortActivity extends BaseSortActiviy{
     插入排序的原理：始终定义第一个元素为有序的，将元素逐个插入到有序排列之中，其特点是要不断的移动数据，
 	空出一个适当的位置，最后把待插入的元素放到里面去。
     插入排序的代码如下：
+    */
 	static void insertion_sort(int[] unsorted)
 	{
 		for (int i = 1; i < unsorted.length; i++)
@@ -41,7 +43,7 @@ public class InsertionSortActivity extends BaseSortActiviy{
 				unsorted[j] = temp;
 			}
 		}
-	}*/
+	}
 
 	@Override
 	public void setDescription(TextView textView) {
@@ -114,5 +116,11 @@ public class InsertionSortActivity extends BaseSortActiviy{
 				showResult();
 			}
 		}).start();
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		MainActivity.SORT_METHOD.INSERTION_SORT.showCode(this);
+		return true;
 	}
 }

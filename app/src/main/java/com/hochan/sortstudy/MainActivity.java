@@ -14,22 +14,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 	enum SORT_METHOD{
 
-		INSERTION_SORT("插入排序", InsertionSortActivity.class),
-		BUBBLE_SORT("冒泡排序", BubbleSortActivity.class),
-		SELECTION_SORT("选择排序", SelectionSortActivity.class),
-		MERGE_SORT("归并排序", MergeSortActivity.class);
+		BUBBLE_SORT("冒泡排序(稳定)", BubbleSortActivity.class, R.drawable.bubble_sort),
+		INSERTION_SORT("插入排序(稳定)", InsertionSortActivity.class, R.drawable.insertion_sort),
+		MERGE_SORT("归并排序(稳定)", MergeSortActivity.class, R.drawable.merge_sort),
+        SELECTION_SORT("选择排序", SelectionSortActivity.class, R.drawable.selection_sort);
 
 		String mName;
 		Class<? extends Activity> mActivityClass;
+        int mDrawableId;
 
-		SORT_METHOD(String name, Class<? extends Activity> activityClass){
+		SORT_METHOD(String name, Class<? extends Activity> activityClass, int drawableid){
 			this.mName = name;
 			this.mActivityClass = activityClass;
+            this.mDrawableId = drawableid;
 		}
 
 		void launch(Activity activity){
 			activity.startActivity(new Intent(activity, mActivityClass));
 		}
+
+        void showCode(Activity activity){
+            Intent intent = new Intent(activity, CodeActivity.class);
+            intent.putExtra(CodeActivity.SOTRMETHOD, mDrawableId);
+            activity.startActivity(intent);
+        }
 	}
 
 	@Override

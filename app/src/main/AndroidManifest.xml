@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.hochan.sortstudy">
+    package="com.hochan.sortstudy">
 
     <application
         android:allowBackup="true"
@@ -10,20 +10,25 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:label="插入排序"
-            android:name=".InsertionSortActivity">
-        </activity>
-        <activity android:name=".BubbleSortActivity">
-        </activity>
-        <activity android:name=".SelectionSortActivity">
-        </activity>
-        <activity android:name=".MergeSortActivity">
-        </activity>
+            android:name=".InsertionSortActivity"
+            android:label="插入排序" />
+        <activity android:name=".BubbleSortActivity" />
+        <activity android:name=".SelectionSortActivity" />
+        <activity android:name=".MergeSortActivity" />
+        <activity
+            android:name=".CodeActivity"
+            android:label="@string/title_activity_code"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".QuickSortActivity"
+            android:label="@string/title_activity_quick_sort"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">SortStudy</string>
-    <string name="des_insertion_sort">插入排序的原理：始终定义第一个元素为有序的，将元素逐个插入到有序排列之中，其特点是要不断的移动数据空出一个适当的位置，最后把待插入的元素放到里面去。</string>
+    <string name="des_insertion_sort">插入排序的原理：始终定义第一个元素为有序的，将元素逐个插入到有序排列之中，其特点是要不断的移动数据空出一个适当的位置，最后把待插入的元素放到里面去。如果碰见一个和插入元素相等的，那么插入元素把想插入的元素放在相等元素的后面。所以，相等元素的前后顺序没有改变，从原无序序列出去的顺序就是排好序后的顺序，所以插入排序是稳定的。</string>
     <string name="des_bubble_sort">"冒泡排序的原理：每次在无序队列里将相邻两个数依次进行比较，将小数调换到前面，逐次比较，直至将最大的数移到最后。最将剩下的N-1个数继续比较，将次大数移至倒数第二位。依此规律，直至比较结束。冒泡排序结束的条件不是数组的长度。应该是当一趟循环结束后，没有数据位置的交换，此时排序就结束。"</string>
-    <string name="des_selection_sort">选择排序的原理：不断从无序队列中找出最小的值，放到有序队列的最后面。</string>
-    <string name="des_merge_sort">"将两个（或两个以上）有序表合并成一个新的有序表 即把待排序序列分为若干个子序列，每个子序列是有序的。然后再把有序子序列合并为整体有序序列 "</string>
+    <string name="des_selection_sort">选择排序的原理：不断从无序队列中找出最小的值，放到有序队列的最后面。选择排序是不稳定的，举个例子，序列5 8 5 2 9，我们知道第一遍选择第1个元素5会和2交换，那么原序列中2个5的相对前后顺序就被破坏了，所以选择排序不是一个稳定的排序算法。</string>
+    <string name="des_merge_sort">"归并排序的原理：将两个（或两个以上）有序表合并成一个新的有序表 即把待排序序列分为若干个子序列，每个子序列是有序的。然后再把有序子序列合并为整体有序序列。合并过程中我们可以保证如果两个当前元素相等时，我们把处在前面的序列的元素保存在结果序列的前面，这样就保证了稳定性。所以，归并排序也是稳定的排序算法"</string>
+    <string name="main_des">稳定性是指，两个值一样的元素的前后顺序在排序的过程中不会改变。</string>
     <string-array name="sort_method">
         <item>插入排序</item>
         <item>冒泡排序</item>
@@ -12,4 +13,6 @@
         <item>归并排序</item>
         <item>堆排序</item>
     </string-array>
+    <string name="title_activity_code">CodeActivity</string>
+    <string name="title_activity_quick_sort">QuickSortActivity</string>
 </resources>

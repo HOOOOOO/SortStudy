@@ -1,14 +1,17 @@
 package com.hochan.sortstudy;
 
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.os.Build;
+import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 public class BubbleSortActivity extends BaseSortActiviy {
 
-	/*static void bubble_sort(int[] unsorted) {
+	static void bubble_sort(int[] unsorted) {
 		boolean flag = false;
-		for (int i = 0; i < unsorted.length; i++) {
+		for (int i = 0; i < unsorted.length - 1; i++) {
 			for (int j = 0; j < unsorted.length - i - 1; j++) {
 				if (unsorted[j] > unsorted[j + 1]) {
 					flag = true;
@@ -19,9 +22,11 @@ public class BubbleSortActivity extends BaseSortActiviy {
 			}
 			if(!flag){
 				break;
+			}else{
+			    flag = false;
 			}
 		}
-	}*/
+	}
 
 	int mJ = 0;
 	int mCurrentI = 0;
@@ -92,5 +97,11 @@ public class BubbleSortActivity extends BaseSortActiviy {
 				}
 			}
 		}).start();
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		MainActivity.SORT_METHOD.BUBBLE_SORT.showCode(this);
+		return true;
 	}
 }
